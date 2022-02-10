@@ -1,6 +1,6 @@
 from email.mime import base
 
-
+# Auto repair payroll exercise 3-2
 base_hours = 40
 ot_multiplier = 1.5
 hours = float(input('Enter the number of hours worked: '))
