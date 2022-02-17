@@ -25,3 +25,31 @@ else:
         format(MIN_SALARY, ',.2f'),
         ' per year to qualify.', sep='')
 print()
+# Program 3-6: GRADER.PY
+# This program gets a numeric test score from
+# user and displays the corresponding letter grade.
+
+# Named constants to represent the grade thresholds
+A_Score = 90
+B_Score = 80
+C_Score = 70
+D_Score = 60
+
+# Get a test score from the user.
+score = int(input('Enter your test score: '))
+
+# Determine the grade.
+
+if score >= A_Score:
+    print('Your grade is A.')
+else:
+    if score >= B_Score:
+        print('Your grade is B.')
+    else:
+     if score >= C_Score:
+         print('Your grade is C.')
+     else: 
+        if score >= D_Score:
+            print('Your grade is D.')
+        else:
+            print('Your grade is F.')
