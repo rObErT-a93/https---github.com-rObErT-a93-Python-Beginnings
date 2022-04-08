@@ -94,3 +94,26 @@ INTEREST_RATE = 0.069
 balance = 123456
 amount = balance * INTEREST_RATE
 print(format(amount, '10.2f'))
+
+# Code from YouTube
+
+import colorsys
+import turtle
+
+t = turtle.Turtle()
+s = turtle.Screen()
+s.bgcolor('black')
+t.speed(0)
+h = 4
+for i in range(300):
+    c = colorsys.hls_to_rgb(h, 0.5, 0.9)
+    t.pencolor(c)
+    h += 0.005
+    t.circle(100, 200)
+    t.circle(50, 200)
+
+    for j in range(4):
+        t.rt(90)
+        t.forward(20)
+    t.hideturtle()
+turtle.done()
