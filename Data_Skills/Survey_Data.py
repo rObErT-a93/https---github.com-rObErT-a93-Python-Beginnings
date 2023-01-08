@@ -11,3 +11,12 @@ print(df.head())
 print(df.shape)
 print(df['BetterLife'].value_counts())
 print(df['MgrMoney'].value_counts(normalize=True))
+
+said_no = df[df['BetterLife'] == 'No']
+# said_no = creates new variable and makes it equal to 'No', whats on the right side of the = sign
+# df makes said_no equivalent to the dataframe, but df['BetterLife'] == 'No' only includes rows from
+# df in which the answer in the BL column is equal to 'No'
+print(said_no.head(3))
+said_no.shape
+print(said_no.shape)
+print(said_no['BetterLife'].value_counts())
