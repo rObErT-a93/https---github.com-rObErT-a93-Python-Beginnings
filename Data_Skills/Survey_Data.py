@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('/Users/robert/Downloads/stack-overflow-developer-survey-2021/survey_results_public.csv')
+df = pd.read_csv('/Users/robert/Downloads/stack-overflow-developer-survey-2019/survey_results_public.csv')
 #df = pd.Series([1, 2, 3])
 # df = tells python we're creating a new variablel called df
 # pd tells Python to look at the pandas library we imported
@@ -9,4 +9,5 @@ df = pd.read_csv('/Users/robert/Downloads/stack-overflow-developer-survey-2021/s
 df.shape
 print(df.head())
 print(df.shape)
-print(df['NEWOtherComms'].value_counts(normalize=True))
+print(df['BetterLife'].value_counts())
+print(df['MgrMoney'].value_counts(normalize=True))
