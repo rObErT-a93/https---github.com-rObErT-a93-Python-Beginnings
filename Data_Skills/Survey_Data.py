@@ -28,51 +28,5 @@ print(said_no.head(3))
 said_no.shape
 print(said_no.shape)
 print(said_no['BetterLife'].value_counts())
-print()
 
-said_yes = df[df['BetterLife'] == 'Yes']
-print(said_yes.head(3))
-said_yes.shape
-print(said_yes.shape)
-print(said_yes['BetterLife'].value_counts())
-print()
-
-print(said_no['Age'].mean(),
-said_yes['Age'].mean(),
-said_no['Age'].median(),
-said_yes['Age'].median())
-print()
-
-over50 = df[df['Age'] >= 50]
-under25 = df[df['Age'] <= 25]
-print(over50['BetterLife'].value_counts(normalize=True))
-print()
-print(under25['BetterLife'].value_counts(normalize=True))
-print()
-
-print(len(over50))
-print(len(under25))
-print()
-
-filtered_1 = df[(df['BetterLife'] == 'Yes') & (df['Country'] == 'India')]
-print(filtered_1['BetterLife'].value_counts())
-print(filtered_1['Country'].value_counts())
-print()
-
-filtered = df[(df['BetterLife'] == 'Yes') & (df['Age'] >= 50) & (df['Country'] == 'India') &~ (df['Hobbyist'] == "Yes") &~ (df['OpenSourcer'] == "Never")]
-print(filtered)
-print()
-
-print(df["LanguageWorkedWith"].head())
-print()
-
-python_bool = df["LanguageWorkedWith"].str.contains('Python')
-print(python_bool.value_counts(normalize=True))
-print()
-
-lang_lists = df["LanguageWorkedWith"].str.split(';' , expand=True)
-print(lang_lists.head())
-print()
-
-print(lang_lists.stack().value_counts())
 print()
